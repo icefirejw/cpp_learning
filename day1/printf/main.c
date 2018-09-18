@@ -14,6 +14,7 @@ int main()
 {
     printf("Hello Qicheng!\n");
     print_stars();
+    getchar();
     return 0;
 }
 
