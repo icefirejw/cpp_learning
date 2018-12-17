@@ -17,6 +17,11 @@ gen/
 *.pyc
 *.exe
 
+#ignore codeblocks temp files
+*.depend
+*.layout
+
+
 #ignore system temp files
 *~
 .DS_Store
@@ -25,6 +30,7 @@ Info.plist
 *.xcworkspace
 xcuserdata
 *.lock
+*.swp
 
 #ignore vs code project files
 c_cpp_properties.json
