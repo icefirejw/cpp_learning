@@ -1,8 +1,11 @@
-#include <iostream>
+//
+// Created by WangSenbo on 2019-04-01.
+//
 
-#ifndef __BASIC_CPP_H__
-#define __BASIC_CPP_H__
+#ifndef BASIC_CPP_BASIC_CPP_H
+#define BASIC_CPP_BASIC_CPP_H
 
-extern int hello_world();
+#define BASIC_CPP__DEFAULT
+#define BASIC_CPP_CPP_INTRODUCTION
 
-#endif // __BASIC_CPP_H__
+#endif //BASIC_CPP_BASIC_CPP_H

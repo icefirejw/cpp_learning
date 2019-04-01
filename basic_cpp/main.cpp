@@ -1,21 +1,13 @@
 #include <iostream>
-#include "basic_cpp.h"
-
 using namespace std;
 
-int variable()
-{
-    //¶¨Òå±äÁ¿a£¬²¢³õÊ¼»¯Îª10
-    int a = 10;
-    cout << "a=" << a << endl;
-
-    return 0;
-}
 int main()
 {
-    //hello_world();
+    // å•è¡Œæ³¨é‡Šï¼šæ‰“å°ä¿¡æ¯ "//"
 
-    variable();
-
+    /*
+     * è¿™æ˜¯å¤šè¡Œæ³¨é‡Š
+     * */
+    cout << "Hello, World!" << endl;
     return 0;
 }

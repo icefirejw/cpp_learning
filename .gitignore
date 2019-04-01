@@ -9,18 +9,13 @@ Release/
 gen/
 .idea/
 .vs/
+cmake-build-debug/
 
 #ignore objects and archives, anywhere in the tree.
 *.[oa]
 *.obj
 *.[bB]
-*.pyc
-*.exe
-
-#ignore codeblocks temp files
-*.depend
-*.layout
-
+*.swp
 
 #ignore system temp files
 *~
@@ -30,7 +25,6 @@ Info.plist
 *.xcworkspace
 xcuserdata
 *.lock
-*.swp
 
 #ignore vs code project files
 c_cpp_properties.json
