@@ -16,6 +16,9 @@ cmake-build-debug/
 *.obj
 *.[bB]
 *.swp
+*.exe
+*.depend
+*.layout
 
 #ignore system temp files
 *~
