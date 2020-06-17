@@ -32,7 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="main373660h.cpp" />
+		<Unit filename="mail374775a.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
