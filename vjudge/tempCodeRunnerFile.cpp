@@ -1,32 +1,52 @@
 #include <iostream>
+#include <cstdio>
+#include <string>
+#include <string.h>
 
 using namespace std;
 
-int s1[105]={0};
-int s2[105]={0};
 
-void fb(long long n, int s[])
-{
-    while (n!=0)
-    {
-        int idx = n%10;
-        s[idx] = 1;
-        n=n/10;
+char s1[35], s2[35];
+int code2(const char* const str1, const char* const str2){
+    if(NULL == str1 || NULL == str2)
+        return 0;
+        
+    int len1, len2, i;
+    char* tmp = NULL;
+    len1 = strlen(str1);
+    len2 = strlen(str2);
+    
+    if(len2 > len1)
+        return 0;
+        
+    tmp = (char*)malloc(len1 * 2);
+    memset(tmp, 0, len1*2);
+    strcpy(tmp, str1);
+    
+    for(i = 0; i < len1; i++){
+        if(strncmp(tmp + i, str2, len2) == 0){
+            free(tmp);
+            tmp = NULL;
+            return 1;
+        }
+        tmp[len1 + i] = str1[i];
     }
+    
+    free(tmp);
+    tmp = NULL;
+    return 0;
 }
 
 int main()
 {
-    long long a,b;
+    cin >> s1 >> s2;
 
-    cin>>a>>b;
-    fb(a,s1);
-    fb(b,s2);
-    for (int i=1; i<10; i++){
-        if (s1[i]==1 && s2[i]==1){
-            cout << i << " ";
-        }
+    if (code2(s1, s2) ==1 || code2(s2, s1)==1){
+        cout << "true" <<endl;
+    }
+    else{
+        cout << "false" << endl;
     }
     return 0;
-    
+
 }
