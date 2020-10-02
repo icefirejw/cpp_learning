@@ -15,6 +15,7 @@ cmake-build-debug/
 *.[oa]
 *.obj
 *.[bB]
+*.[dD]
 *.swp
 *.exe
 *.depend
