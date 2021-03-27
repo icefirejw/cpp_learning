@@ -20,6 +20,8 @@ cmake-build-debug/
 *.exe
 *.depend
 *.layout
+*.in
+*.out
 
 #ignore system temp files
 *~
