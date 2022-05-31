@@ -1,0 +1,75 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+long long x[110],y[110],n,t,sum;
+bool f;
+
+int main()
+{
+  cin>>t;
+  for(int i=1;i<=t;i++)
+  {
+    cin>>n;
+    for(int j=1;j<=n;j++)
+    {
+      cin>>x[j]>>y[j];
+    }
+    for(int j=1;j<=n;j++)
+    {
+      for(int l=j+1;l<=n;l++)
+      {
+        if(x[j]==x[l]&&y[j]==y[l])
+        {
+          x[l]=-1;
+          y[l]=-1;
+        }
+      }
+    }
+    for(int j=1;j<=n;j++)
+    {
+      for(int l=1;l<=n;l++)
+      {
+        if(x[j]==x[l]&&x[j]!=-1&&x[l]!=-1&&j!=l)
+        {
+          for(int k=1;k<=n;k++)
+          {
+            if(y[j]==y[k]&&j!=k)
+            {
+              for(int o=1;o<=n;o++)
+              {
+                if(x[o]==x[l]&&y[o]==y[l])
+                {
+                  sum++;
+                  //cout<<x[j]<<' '<<y[j]<<" "<<x[l]<<" "<<y[l]<<" "<<x[o]<<" "<<y[o]<<" "<<x[k]<<" "<<y[k]<<endl;
+                  f=true;
+                  break;
+                }
+              }
+            }
+            if(y[l]==y[k]&&l!=k)
+            {
+              for(int o=1;o<=n;o++)
+              {
+                if(x[o]==x[j]&&y[o]==y[j])
+                {
+                  sum++;
+                  //cout<<x[j]<<' '<<y[j]<<" "<<x[l]<<" "<<y[l]<<" "<<x[o]<<" "<<y[o]<<" "<<x[k]<<" "<<y[k]<<endl;
+                  f=true;
+                  break;
+                }
+              }
+            }
+          }
+          if(f)
+          {
+            f=false;
+            break;
+          }
+        }
+      }
+    }
+  }
+  cout<<sum/4<<endl;
+  return 0;
+}
