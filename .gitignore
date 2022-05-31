@@ -12,13 +12,45 @@ gen/
 cmake-build-debug/
 
 #ignore objects and archives, anywhere in the tree.
-*.[oa]
-*.obj
-*.[bB]
-*.[dD]
 *.swp
+*.un~
+
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
 *.exe
+*.out
+*.app
+
+# Dev-c++
 *.depend
+*.dev
 *.layout
 *.in
 *.out
