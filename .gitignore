@@ -10,6 +10,7 @@ gen/
 .idea/
 .vs/
 cmake-build-debug/
+.vscode/
 
 #ignore objects and archives, anywhere in the tree.
 *.swp
