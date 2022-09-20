@@ -1,3 +1,14 @@
+/**
+ * @file main1255.cpp
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-09-20
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -8,37 +19,13 @@ int sa[5010], sb[5010], sc[5010];
 int len_a = 0;
 int len_b = 0;
 int len_c = 0;
-// char s[5010];
-/*
-string gj(string x,string y)
-{
-    long long a[5010],b[5010],len;
-    for(int j=0;j<x.size();j++)
-    {
-        a[j]=x[x.size()-j-1]-'0';
-    }
-    for(int j=0;j<y.size();j++)
-    {
-        b[j]=y[y.size()-j-1]-'0';
-    }
-    len=max(x.size(),y.size());
-    for(int j=0;j<len;j++)
-    {
-        a[j]+=b[j];
-        if(a[j]>=10)
-        {
-            a[j+1]+=1;
-            a[j]%=10;
-        }
-    }
-    for(int j=0;j<len;j++)
-    {
-
-    }
-    cout<<endl<<s<<endl;
-    return s;
-}
-*/
+/**
+ * @brief 
+ * 
+ * @param ga 
+ * @param gb 
+ * @return int 
+ */
 int gj(int ga[], int gb[])
 {
     int len = max(len_a, len_b);
@@ -90,6 +77,12 @@ int gj(int ga[], int gb[])
     */
     return len;
 }
+
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
 int main()
 {
     cin >> n;
@@ -119,19 +112,6 @@ int main()
         //cout << endl;
         len_a = len_b;
         len_b = len_c;
-        /*
-        if(i==n)
-        {
-            cout<<"已输出:"<<gj(sa,sb)<<"没了!"<<endl;
-        }
-        if(i%2==1)
-        {
-            sa=gj(sa,sb);
-        }
-        else
-        {
-            sb=gj(sa,sb);
-        }*/
     }
 
     for (int i = len_c - 1; i >= 0; i--)
